@@ -1,0 +1,27 @@
+.MainContent1 {
+    border-bottom:1px solid #eaeaea;
+}
+
+.MainContent1  {
+    
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8172455e-6249-47c7-bbbb-ad6e093ccb66/defhabb-5250edf6-e621-467e-8c3b-f0e564c21cbe.png/v1/fill/w_1280,h_1280,q_80,strp/episode21artwork_by_santanacodec_defhabb-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMjgwIiwicGF0aCI6IlwvZlwvODE3MjQ1NWUtNjI0OS00N2M3LWJiYmItYWQ2ZTA5M2NjYjY2XC9kZWZoYWJiLTUyNTBlZGY2LWU2MjEtNDY3ZS04YzNiLWYwZTU2NGMyMWNiZS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.x7MZzsc7-rvwY58oT1o3JG6Ipw5YQHuAoBQIvlxayr4");
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    
+    
+    background-clip: border-box;
+    transition: background-size 0.2s;
+    transition-timing-function: cubic-bezier(.07,1.41,.82,1.41);
+
+    display: block;
+    width: 1300px;
+    height: 1000px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space:nowrap; 
+}
+a{
+
+}
