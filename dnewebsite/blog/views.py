@@ -7,6 +7,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.response import Response
+from rest_framework.decorators import APIView
 
 @api_view(['GET','POST'])
 def blog_list (request):
@@ -25,7 +26,7 @@ class blogListCreate(generics.ListCreateAPIView):
     queryset = blog.objects.all()
     serializer_class = blogSerializer
 
-@api_view(['GET','PUT','DELETE'])
+@api_view(['GET','PUT','DELETE']) #function based views
 def blogDetails(request,pk):
     try:
         Blog = blog.objects.get(pk=pk)
@@ -46,4 +47,14 @@ def blogDetails(request,pk):
         Blog.delete()
         return HttpResponse(status=status.HTTP_204_NO_CONTENT)
 
-# Create your views here.
+class blogViewClass(APIView):
+    def get(self,request):
+        blogs = blog.objects.all()
+        serializer = blogSerializer(blogs,many=True)
+        return Response(serializer.data)
+    def post(self,request):
+        serializer = blogSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
